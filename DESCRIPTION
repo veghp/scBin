@@ -1,0 +1,10 @@
+Package: scBin
+Type: Package
+Title: scBin: single-cell RNA-seq Data Plotter and Binarizer
+Version: 0.1.0
+Date: 2019-03-25
+Author: Peter Vegh
+Maintainer: Peter Vegh <peter.vegh@ncl.ac.uk>
+Description: Plots single-cell RNA-seq flow marker gene counts and
+  binarizes data using a cutoff.
+License: GPL-3

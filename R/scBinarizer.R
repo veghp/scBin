@@ -25,8 +25,8 @@ scBinarizer <- function(x, cutoff = 0, logit = F) {
     x <- x * 1000000 # cpm
   }
 
-  x[x > cutoff] <- 1
   x[x <= cutoff] <- 0
+  x[x > cutoff] <- 1 # order is very important
 
   return(x)
 }

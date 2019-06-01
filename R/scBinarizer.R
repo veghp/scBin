@@ -20,8 +20,8 @@ scBinarizer <- function(x, cutoff = 0) {
 
   if(!(cutoff == round(cutoff))) {stop("Cutoff is not a whole number.")}
 
-  x[x > cutoff] <- 1
   x[x <= cutoff] <- 0
+  x[x > cutoff] <- 1 # order is very important
 
   return(x)
 }

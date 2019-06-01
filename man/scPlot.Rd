@@ -1,9 +1,7 @@
 \name{scPlot}
 \alias{scPlot}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Plot protein vs gene expression
-%%  ~~function to do ... ~~
 }
 \description{
 Plots protein expression for specified marker genes and calculates a count cutoff for expression, a confusion matrix, and generates a plot.
@@ -11,7 +9,6 @@ Plots protein expression for specified marker genes and calculates a count cutof
 \usage{
 scPlot(x, meta, markers, tnr = 0.95, jitter = F)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{x}{count matrix. Rows: samples (cells). Columns: features (genes).}
   \item{meta}{metadata dataframe, where one of the columns is a binary vector of flow (protein) sorting bins. Count and metadata cells must be the same and in the same order.}
@@ -20,32 +17,21 @@ scPlot(x, meta, markers, tnr = 0.95, jitter = F)
   \item{jitter}{jitters the dots on the plot if set TRUE.}
 }
 \details{
-%%  ~~ If necessary, more details than the description above ~~
 }
 \value{List of three:
-%%  ~Describe the value returned
-%%  If it is a LIST, use
   \item{cutoff }{the calculated cutoff for given specificity for nonzero counts}
   \item{confusion }{confusion matrix of all values after applying the cutoff}
   \item{plots }{the saved plots of protein expression vs gene count}
 }
 \references{
-%% ~put references to the literature/web site here ~
 }
 \author{Peter Vegh}
 \note{
-%%  ~~further notes~~
 }
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-%##---- Should be DIRECTLY executable !! ----
-%##-- ==>  Define data, use random,
-%##--	or do  help(data=index)  for the standard data sets.
 
 %## The function is currently defined as
 %function (x, meta, markers, tnr = 0.95, jitter = F) 
@@ -82,7 +68,3 @@ scPlot(x, meta, markers, tnr = 0.95, jitter = F)
     %return(plotlist)
   %}
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-%\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-%\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

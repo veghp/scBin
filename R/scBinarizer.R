@@ -15,10 +15,15 @@
 # You should have received a copy of the GNU General Public License
 # along with scBin.  If not, see <https://www.gnu.org/licenses/>.
 
-scBinarizer <- function(x, cutoff = 0) {
+scBinarizer <- function(x, cutoff = 0, logit = F) {
   if(any(x < 0)) {stop("Negative values in count matrix.")}
 
-  if(!(cutoff == round(cutoff))) {stop("Cutoff is not a whole number.")}
+  if(logit) {
+    print('Logit TRUE')
+    x.row.sums <- rowSums(x)
+    x <- sweep(x, 1, x.row.sums, "/")
+    x <- x * 1000000 # cpm
+  }
 
   x[x > cutoff] <- 1
   x[x <= cutoff] <- 0
